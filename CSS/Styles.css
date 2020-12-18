@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: green;
+}
+
+#timedown {
+  text-align: center;
+  margin: 20px;
+  width: 21em;
+  background: linear-gradient(
+    0deg,
+    rgb(0, 243, 238) 0%,
+    rgb(0, 184, 243) 30%,
+    rgb(253, 116, 222) 100%
+  );
+  color: rgb(39, 38, 38);
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-family: "Open Sans", sans-serif;
+  width: 39%;
+}
+
+#timedown div {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 5px 10px;
+  display: inline;
+}
+
+#timedown .text {
+  font-weight: normal;
+  font-size: 15px;
+  display: block;
+}
+
+#timedown .days,
+#timedown .hours,
+#timedown .minuts {
+  border-right: 1px solid #ffffff;
+}
+
+.timedown-out {
+  animation-duration: 3s;
+  animation-name: out;
+}
+
+.time-over {
+  font-size: 18px !important;
+  margin: 20px;
+  right: 0px;
+  font-family: "Open Sans", sans-serif;
+  animation-duration: 5s;
+  animation-name: up;
+}
+
+@keyframes up {
+  0% {
+    margin-top: 200px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes out {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -50%;
+  }
+}
